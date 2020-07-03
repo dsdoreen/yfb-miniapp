@@ -1,0 +1,78 @@
+<!--pages/pay/pay.wxml-->
+<view class="app-pay">
+<!-- 收货地址块 begin -->
+	
+	
+	<view class="address_con">
+		<view class="adrs_info">
+			<view>
+				收货人：{{address.userName}}
+			</view>
+				<view class="adrs_phone">
+			{{address.telNumber}}
+		</view>
+		
+		</view>
+		<view class="adrs_allinfo">
+				{{address.all}}
+			</view>
+
+
+	</view>
+	<!-- 收货地址块 end -->
+	<!-- 结算列表 begin-->
+	<view class="part_tit">结算列表</view>
+	<view class="cart_main">
+		<view>
+			<view class="cart_item" wx:for="{{cart}}" wx:for-item="citem" wx:key="{{citem[idx].id}}" wx:for-index="idx" data-index="{{citem.goods_id}}">
+			
+				<view class="cart_info">
+					
+						<view class="pic">
+							<navigator>
+							<image src="{{citem.pics[0].pics_sma}}" mode="widthFix"></image>
+							</navigator>
+						</view>
+					
+						<view class="cont">
+						
+							<view class="name">
+								<navigator>
+								{{citem.goods_name}}
+									</navigator>
+							</view>
+						
+							<view class="price_set">
+								<view class="price">
+									{{citem.goods_price}}<text class="txt_jf">积分</text>
+								</view>
+								<view class="step">
+								
+									<view class="num">X {{citem.num}}</view>
+									
+								</view>
+							</view>
+						</view>
+					
+
+				</view>
+			</view>
+		</view>
+		
+	</view>
+	<!-- 计算列表 end-->
+	<!-- 结算模块 begin -->
+	<view class="cart_settlement">
+		<view class="settle_cont">
+			<view class="font">合计:</view>
+			<view class="total_price">
+				<view class="price">
+					{{totalPrice}}<text class="txt_jf">积分</text>
+				</view>
+				<text class="txt_tips">已包含运费</text>
+			</view>
+			<button type="warn" bindtap="handleOrderPay">支付({{sum}})</button>
+		</view>
+	</view>
+	<!--结算模块 end -->
+</view>

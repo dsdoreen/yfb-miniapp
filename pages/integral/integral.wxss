@@ -1,0 +1,21 @@
+/* pages/integral/integral.wxss */
+.app-integral .integral_wrap .item {
+  padding: 20rpx;
+  background: #ededed;
+}
+.app-integral .integral_wrap .item:nth-child(even) {
+  background: #fff;
+}
+.app-integral .integral_wrap .item .item_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-integral .integral_wrap .item .item_row .row_info text {
+  font-weight: bold;
+  font-size: 40rpx;
+  padding-right: 10rpx;
+}
+.app-integral .integral_wrap .item .item_row .add_css {
+  color: red;
+}

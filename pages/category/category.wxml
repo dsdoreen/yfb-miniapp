@@ -1,0 +1,37 @@
+<view class="app-category">
+  <!-- 搜索框 begin -->
+  <SearchInput />
+  <!-- 搜索框 end -->
+  <!-- 分类 begin-->
+  <view class="category_container">
+    <!-- 左侧菜单栏 begin-->
+    <scroll-view scroll-y class="left_menu">
+      <view wx:for="{{LeftMenus}}" wx:for-item="l_item" wx:key="{{l_item.id}}" catchtap="changeCate" class="{{index===CurIndex?'cur':''}}"
+      bindtap="changeCate" data-index="{{index}}"
+      >
+      {{l_item.name}}
+      </view>
+    </scroll-view>
+    <!-- 左侧菜单栏 end-->
+    <!-- 右侧商品分类 begin-->
+    <scroll-view scroll-top="{{ScrollTop}}"  scroll-y class="right_content">
+      <!-- 商品类分组 begin -->
+      <view class="goods_group" wx:for="{{RightCont}}" wx:for-item="r_item" wx:key="{{r_item.cat_id}}">
+        <view class="goods_title">
+          / <text>{{r_item.cat_name}}</text> /
+        </view>
+        <view class="goods_list">
+          <navigator wx:for="{{r_item.children}}"
+          wx:for-item="r_citem" wx:key="r_citem.cat_id" url="/pages/goods_list/goods_list?cid={{r_citem.cat_id}}"
+          >
+              <image src="{{r_citem.cat_icon}}" mode="widthFix"></image>
+              <text>{{r_citem.cat_name}}</text>
+          </navigator>
+        </view>
+      </view>
+      <!-- 商品类分组 end -->
+    </scroll-view>
+    <!-- 右侧商品分类 end-->
+  </view>
+  <!-- 分类 end-->
+</view>

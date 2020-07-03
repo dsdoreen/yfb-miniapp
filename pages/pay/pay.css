@@ -1,0 +1,117 @@
+/* pages/pay/pay.wxss */
+.app-pay {
+  margin: 20rpx 0;
+  padding-bottom: 90rpx;
+}
+.app-pay .address_con {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  border-bottom: 1px solid var(--themeColor);
+}
+.app-pay .address_con .adrs_info {
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+}
+.app-pay .address_con .adrs_allinfo {
+  padding-top: 20rpx;
+}
+.app-pay .address_con .adrs_phone {
+  flex: 2;
+  text-align: right;
+}
+.app-pay .cart_main {
+  border-top: 1px solid var(--themeColor);
+}
+.app-pay .cart_main .cart_item {
+  margin: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #efefef;
+}
+.app-pay .cart_main .cart_item .cart_info {
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+}
+.app-pay .cart_main .cart_item .cart_info .pic {
+  flex: 2;
+  margin-right: 30rpx;
+}
+.app-pay .cart_main .cart_item .cart_info .pic image {
+  width: 100%;
+  height: 100%;
+}
+.app-pay .cart_main .cart_item .cart_info .cont {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.app-pay .cart_main .cart_item .cart_info .cont .name {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.app-pay .cart_main .cart_item .cart_info .cont .price_set {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.app-pay .cart_main .cart_item .cart_info .cont .price_set .price {
+  flex: 2;
+  text-align: left;
+  color: var(--themeColor);
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.app-pay .cart_main .cart_item .cart_info .cont .price_set .step {
+  flex: 1;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.app-pay .cart_settlement {
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  border-top: 1px solid #efefef;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.app-pay .cart_settlement .settle_cont {
+  height: 100%;
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.app-pay .cart_settlement .settle_cont .font {
+  flex: 1;
+  text-align: right;
+}
+.app-pay .cart_settlement .settle_cont .total_price {
+  flex: 1.2;
+  text-align: right;
+  margin-right: 20rpx;
+}
+.app-pay .cart_settlement .settle_cont button {
+  flex: 1;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: normal;
+  border-radius: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--themeColor);
+}

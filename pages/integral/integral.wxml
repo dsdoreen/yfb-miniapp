@@ -1,0 +1,24 @@
+<view class="app-integral">
+  	<view class="integral_wrap">
+				<view wx:if="{{integral[0].num}}">
+					<view class="item" wx:for="{{integral}}" wx:for-item="inteitem">
+						<view class="num item_row">
+							<view class="row_text">
+								{{inteitem.info}}
+							</view>
+							<view class="row_info {{inteitem.calctype=='+'?'add_css':''}}">
+								<text>{{inteitem.calctype}}</text>{{inteitem.num}}
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="empty_cont" wx:else>
+					暂无积分明细～
+				</view>
+
+
+		
+
+	
+	</view>
+</view>

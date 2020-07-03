@@ -1,0 +1,13 @@
+<!--components/Tabs/tabs.wxml-->
+<view class="com-tabs">
+  <view class="tabs_title">
+   <!-- //bindtap定义事件名称 并定义传递的数据 -->
+    <view class="title_item {{t_item.isActive?'active':''}}" wx:for="{{tabs}}" wx:for-item="t_item" wx:key="{{t_item.id}}" bindtap="changeTit" data-index="{{t_item.id}}">
+      {{t_item.value}}
+    </view>
+  </view>
+  <view class="tabs_content">
+  <!-- 此处放插槽 内容从父元素读取-->
+    <slot></slot>
+  </view>
+</view>

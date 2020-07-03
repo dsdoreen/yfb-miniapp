@@ -1,0 +1,36 @@
+<view class="app-index">
+  <SearchInput/>
+  <!-- 轮播图 begin-->
+  <view class="index_swiper">
+    <swiper indicator-dots indicator-active-color="#fff" autoplay interval="3000" circular>
+      <swiper-item wx:for="{{swiperList}}" wx:for-item="swiperitem" wx:key="{{swiperitem.swiperitem}}">
+        <navigator url="/pages/goods_detail/goods_detail?goods_id={{swiperitem.goods_id}}" open-type="{{swiperitem.open_type}}">
+          <image src="{{swiperitem.image_src}}" mode="widthFix"></image>
+        </navigator>
+
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图 end-->
+  <!-- 分类导航 begin -->
+  <view class="index_category">
+    <navigator wx:for="{{cateList}}" wx:for-item="cateitem" wx:key="{{cateitem.name}}" url="/pages/category/category" open-type="switchTab">
+      <image mode="widthFix" src="{{cateitem.image_src}}"></image>
+    </navigator>
+  </view>
+  <!-- 分类导航 end -->
+  <!-- 商品楼层 begin -->
+  <view class="index_floor">
+    <view class="floor_box" wx:for="{{floorList}}" wx:for-item="flooritem" wx:key="{{flooritem.floor_title.name}}">
+      <view class="title">
+        <image src="{{flooritem.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+      <view class="goods_group">
+        <navigator wx:for="{{flooritem.product_list}}" wx:for-item="floor_subitem" wx:key="{{floor_subitem.name}}" url="/{{floor_subitem.navigator_url}}" open-type="navigate">
+          <image src="{{floor_subitem.image_src}}" ></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 商品楼层 end -->
+</view>

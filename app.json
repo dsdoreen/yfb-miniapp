@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/goods_list/goods_list",
+    "pages/goods_detail/goods_detail",
+    "pages/cart/cart",
+    "pages/collect/collect",
+    "pages/order/order",
+    "pages/search/search",
+    "pages/user/user",
+    "pages/feedback/feedback",
+    "pages/login/login",
+    "pages/auth/auth",
+    "pages/pay/pay",
+    "components/SearchInput/SearchInput",
+    "pages/integral/integral"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#eb4450",
+    "navigationBarTitleText": "易分宝",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#E64330",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/ic_home.png",
+        "selectedIconPath": "icons/cur_ic_home.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "商品分类",
+        "iconPath": "icons/ic_type.png",
+        "selectedIconPath": "icons/cur_ic_type.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "icons/ic_car.png",
+        "selectedIconPath": "icons/cur_ic_car.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "icons/ic_member.png",
+        "selectedIconPath": "icons/cur_ic_member.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

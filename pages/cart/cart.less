@@ -1,0 +1,164 @@
+/* pages/cart/cart.wxss */
+.app-cart{
+    margin: 20rpx 0;
+    padding-bottom: 90rpx;
+    .address_btn{
+        width: 100%;
+        button{
+            width: 80%;
+            font-weight: normal;
+        }
+    }
+    .address_con{
+        display: flex;
+        flex-direction: column;
+        padding: 20rpx;
+        border-bottom: 1px solid var(--themeColor);
+        .adrs_info{
+            flex:5;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+        }
+        .adrs_allinfo{
+            // border-top: 1px solid #efefef;
+            padding-top: 20rpx;
+        }
+        .adrs_phone{
+            flex:2;
+            text-align: right;
+        }
+    }
+    .cart_main{
+        border-top: 1px solid var(--themeColor);
+        .cart_item{
+            margin: 20rpx;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #efefef;
+            .cart_checks{
+                flex: 1;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            .cart_info{
+                flex:5;
+                display: flex;
+                justify-content: space-between;
+               
+                   
+                    .pic{
+                        flex: 2;
+                        margin-right: 30rpx;
+                        image{
+                          width: 100%;
+                          height: 100%;
+                        }
+
+                    }
+                    .cont{
+                        flex:5;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 30rpx;
+                        .name{
+                            display: -webkit-box;
+                            overflow: hidden;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                        .price_set{
+                            display: flex;
+                            width: 100%;
+                            justify-content: space-between;
+                            .price{
+                                flex: 2;
+                                text-align: left;
+                                color: var(--themeColor);
+                                font-weight: bold;
+                                font-size: 32rpx;
+                            }
+                            .step{
+                                flex: 1;
+                                text-align: right;
+                                display: flex;
+                                justify-content: space-between;
+                                .calcbtn{
+                                    background: #fff;
+                                    border: 1px solid #efefef;
+                                    display: flex;
+                                    width: 40rpx;
+                                    height: 40rpx;
+                                    line-height: 40rpx;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                
+            }
+        }
+
+        .empty_cart{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32rpx;
+            color: #666;
+            margin: 30rpx;
+        }
+
+    }
+    .cart_settlement{
+        width: 100%;
+        height: 100rpx;
+        background: #fff;
+        border-top: 1px solid #efefef;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .all_check{
+            flex: 2;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .settle_cont{
+            height: 100%;
+            flex: 6;
+            display: flex;
+            justify-content:flex-end;
+            align-items: center;
+            .font{
+                flex: 2;
+                text-align: right;
+            }
+            .total_price{
+                flex: 4;
+                color: #666;
+                text-align: right;
+                margin-right: 20rpx;
+                font-size: 26rpx;
+            }
+            button{
+                flex: 3;
+                color: #fff;
+                font-size: 32rpx;
+                font-weight: normal;
+                border-radius: 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--themeColor);
+            }
+        }
+    }
+}

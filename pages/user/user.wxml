@@ -1,0 +1,99 @@
+<!--pages/user/user.wxml-->
+<view class="app-user">
+	<!-- 头部区域 begin -->
+	<view class="head_warp">
+		<!-- 头部背景 begin -->
+		<view class="head" wx:if="{{userInfo.nickName}}">
+			<image class="bg" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+			<view class="user_icon">
+				<image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+				<view class="user_name">{{userInfo.nickName}}</view>
+			</view>
+		</view>
+		<!-- 头部背景 end -->
+		<!-- 登录按钮 begin -->
+		<view class="sigin_btn" wx:else>
+			<button type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">点击登录</button>
+		</view>
+		<!-- 登录按钮 end -->
+	</view>
+	<!-- 头部区域 begin -->
+	<!-- 用户信息内容区 begin -->
+	<view class="user_content">
+		<view class="user_main">
+			<!-- 历史足迹 begin-->
+			<view class="main_box">
+				<view class="handle items">
+
+					<navigator url="/pages/integral/integral">
+						<view class="num">{{userInfo.money}}</view>
+						<view>我的积分</view>
+					</navigator>
+          <navigator url="/pages/order/order">
+						<view class="num">{{userInfo.cost}}</view>
+						<view>已兑换积分</view>
+					</navigator>
+					<navigator url="/pages/collect/collect">
+						<view class="num">0</view>
+						<view>收藏的商品</view>
+					</navigator>
+				</view>
+			</view>
+			<!-- 历史足迹 end-->
+			<!-- 订单 begin-->
+			<view class="main_box">
+				<view class="tit">
+				<navigator url="/pages/order/order">
+					我的订单
+					</navigator>
+				</view>
+				<view class="apply items">
+
+					<navigator url="/pages/order/order?type=0">
+						<view class="iconfont icon-dingdan"></view>
+						<view>全部订单</view>
+					</navigator>
+					<navigator url="/pages/order/order?type=1">
+						<view class="iconfont icon-dizhi"></view>
+						<view>待收货</view>
+					</navigator>
+					<navigator url="/pages/order/order?type=2">
+						<view class="iconfont icon-tuikuan"></view>
+						<view>退款/退货</view>
+					</navigator>
+				</view>
+			</view>
+			<!-- 订单 end-->
+			<!-- 收货地址 begin-->
+			<view class="main_box address_warp">
+				<view bindtap="handleChooseAdrs">
+					收货地址管理
+				</view>
+			</view>
+			<!-- 收货地址 end-->
+			<!-- 应用信息 begin-->
+			<view class="main_box appinfo_warp">
+				<view class="appinfo_item appinfo_contact">
+					<text>联系客服</text>
+					<text>400-618-4000</text>
+				</view>
+				<view class="appinfo_item">
+					<button  open-type="feedback">
+					意见反馈
+				</button>
+				</view>
+			
+				<view class="appinfo_item">
+					关于我们
+				</view>
+			</view>
+			<!-- 应用信息 end-->
+      <!-- 推荐 begin-->
+			<view class="main_box share_warp">
+			<button open-type="share">把应用推荐给其他人</button>
+			</view>
+			<!-- 推荐 end-->
+		</view>
+	</view>
+	<!-- 用户信息内容区 end -->
+</view>

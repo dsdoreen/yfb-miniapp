@@ -1,0 +1,50 @@
+.index_swiper{
+  swiper{
+    width: 750rpx;
+    height: 340rpx;
+    image{
+      width: 100%;
+    }
+  }
+}
+.index_category{
+  display: flex;
+  margin-top: 20rpx;
+  navigator{
+    flex:1;
+    padding: 25rpx;
+    box-sizing: border-box;
+    image{
+      width: 100%;
+    }
+  }
+}
+.index_floor{
+  .floor_box{
+    margin: 50rpx 10rpx;
+  }
+  .goods_group{
+    overflow: hidden;
+    margin: 0 0rpx;
+    navigator{
+      float: left;
+      width: 33.33%;
+      //  大图 232*386
+      // 比例： 232/386=33.33vw/height
+       //大图高度用比例：33.33vw*386/232
+      //小图宽度和大图宽度一样
+      //小图高度用比例：33.33vw*386/232/2
+       height: 33.33vw*386/232;
+       &:nth-last-child(-n+4){
+        height: 33.33vw*386/232/2;
+      }
+      image{
+        width: 100%;
+        height: 100%;
+        padding:5rpx;
+        box-sizing: border-box;
+      }
+     
+    }
+  }
+}

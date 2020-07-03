@@ -1,0 +1,48 @@
+/* pages/search/search.wxss */
+.app-search{
+    .search_item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid var(--themeColor);
+        .ser_txt{
+            flex: 4;
+            padding: 20rpx;
+            input{
+                padding: 5rpx 0px 5rpx 10rpx;
+                border: 1px solid #ededed;
+            }
+        }
+        .ser_btn{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                font-size: 32rpx;
+                font-weight: normal;
+            }
+            
+        }
+       
+    }
+    .search_rescont{
+        padding: 20rpx 40rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+            .res_row{
+                flex: 1;
+                color: #666;
+                padding: 10rpx 0;
+                line-height: 50rpx;
+                border-bottom: 1px solid #ededed;
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+               
+            }
+    }
+
+}

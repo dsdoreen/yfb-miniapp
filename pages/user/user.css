@@ -1,0 +1,118 @@
+/* pages/user/user.wxss */
+page {
+  background: #efefef;
+}
+.app-user .head_warp {
+  height: 45vh;
+  overflow: hidden;
+  position: relative;
+}
+.app-user .head_warp .sigin_btn {
+  height: 100%;
+  background: var(--themeColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-user .head_warp .sigin_btn button {
+  color: #fff;
+  border: 1px solid #fff;
+  font-weight: normal;
+}
+.app-user .head_warp .bg {
+  width: 100%;
+  filter: blur(10px);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.app-user .head_warp .user_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.app-user .head_warp .user_icon image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-bottom: 60rpx;
+}
+.app-user .user_content {
+  width: 90%;
+  margin: -50rpx auto 0;
+  position: relative;
+}
+.app-user .user_content .user_main .main_box {
+  color: #666;
+  margin-bottom: 40rpx;
+}
+.app-user .user_content .user_main .main_box .tit {
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+}
+.app-user .user_content .user_main .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 10rpx 0;
+}
+.app-user .user_content .user_main .items navigator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+.app-user .user_content .user_main .items navigator .num {
+  color: var(--themeColor);
+}
+.app-user .user_content .user_main .items navigator .iconfont {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.app-user .user_content .user_main .address_warp {
+  padding: 20rpx;
+  background: #fff;
+}
+.app-user .user_content .user_main .appinfo_warp .appinfo_item {
+  padding: 20rpx;
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  justify-content: space-between;
+}
+.app-user .user_content .user_main .appinfo_warp .appinfo_item button {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  font-size: 28rpx;
+  color: #666;
+  font-weight: 400;
+  background: #fff;
+  border-radius: 0;
+}
+.app-user .user_content .user_main .share_warp {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.app-user .user_content .user_main .share_warp button {
+  background: #fff;
+  color: #666;
+  height: auto;
+  font-weight: normal;
+  font-size: 28rpx;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,42 @@
+/* pages/search/search.wxss */
+.app-search .search_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--themeColor);
+}
+.app-search .search_item .ser_txt {
+  flex: 4;
+  padding: 20rpx;
+}
+.app-search .search_item .ser_txt input {
+  padding: 5rpx 0px 5rpx 10rpx;
+  border: 1px solid #ededed;
+}
+.app-search .search_item .ser_btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-search .search_item .ser_btn button {
+  font-size: 32rpx;
+  font-weight: normal;
+}
+.app-search .search_rescont {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.app-search .search_rescont .res_row {
+  flex: 1;
+  color: #666;
+  padding: 10rpx 0;
+  line-height: 50rpx;
+  border-bottom: 1px solid #ededed;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

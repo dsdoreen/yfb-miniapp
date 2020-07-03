@@ -1,0 +1,47 @@
+<!--pages/order/order.wxml-->
+<view class="app-order">
+	<view class="order_wrap">
+		<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+
+			<!-- 通过block控制内容显示 -->
+
+			<view class="orders_content">
+				<view wx:if="{{orderList[0].goods_id}}">
+					<view class="item" wx:for="{{orderList}}" wx:for-item="orderitem">
+						<view class="num item_row">
+							<view class="row_text">
+								订单编号：
+							</view>
+							<view class="row_info">
+								HMDD2020060100000010{{orderitem.goods_id}}
+							</view>
+						</view>
+						<view class="num item_row">
+							<view class="row_text">
+								订单价格：
+							</view>
+							<view class="row_info price">
+								{{orderitem.money}}<text class="txt_jf">积分</text>
+							</view>
+						</view>
+						<view class="num item_row">
+							<view class="row_text">
+								商品数量：
+							</view>
+							<view class="row_info">
+								{{orderitem.num}}
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="empty_cont" wx:else>
+					暂无订单数据～
+				</view>
+
+
+			</view>
+
+		</Tabs>
+	</view>
+
+</view>

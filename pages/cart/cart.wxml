@@ -1,0 +1,91 @@
+<!--pages/cart/cart.wxml-->
+<view class="app-cart">
+	<!-- 收货地址块 begin -->
+	<view class="address_btn" wx:if="{{!address.userName}}">
+		<button type="primary" plain bindtap="handleChooseAdrs">+ 获取收货地址</button>
+	</view>
+	<view wx:else class="address_con">
+		<view class="adrs_info">
+			<view>
+				收货人：{{address.userName}}
+			</view>
+				<view class="adrs_phone">
+			{{address.telNumber}}
+		</view>
+		
+		</view>
+		<view class="adrs_allinfo">
+				{{address.all}}
+			</view>
+
+
+	</view>
+	<!-- 收货地址块 end -->
+	<!-- 购物车列表 begin-->
+	<view class="part_tit">购物车</view>
+	<view class="cart_main">
+		<view wx:if="{{cart[0].goods_id}}">
+			<view class="cart_item" wx:for="{{cart}}" wx:for-item="citem" wx:key="{{citem[idx].id}}" wx:for-index="idx" data-index="{{citem.goods_id}}">
+				<view class="cart_checks">
+					<checkbox-group bindtap="handleItemChange" >
+						<checkbox color="var(--themeColor)" checked="{{citem.checked}}" data-id="{{citem.goods_id}}">
+
+						</checkbox>
+					</checkbox-group>
+				</view>
+				<view class="cart_info">
+					
+						<view class="pic">
+							<navigator>
+							<image src="{{citem.pics[0].pics_sma}}" mode="widthFix"></image>
+							</navigator>
+						</view>
+					
+						<view class="cont">
+						
+							<view class="name">
+								<navigator url="/pages/goods_detail/goods_detail?goods_id={{citem.goods_id}}">
+								{{citem.goods_name}}
+									</navigator>
+							</view>
+						
+							<view class="price_set">
+								<view class="price">
+									{{citem.goods_price}}<text class="txt_jf">积分</text>
+								</view>
+								<view class="step">
+									<view class="sub calcbtn" catchtap="CalcCartNum" data-calctype="sub" data-cartid="{{citem.goods_id}}">-</view>
+									<view class="num">{{citem.num}}</view>
+									<view class="add calcbtn" catchtap="CalcCartNum"
+									data-calctype="add"  data-cartid="{{citem.goods_id}}">+</view>
+								</view>
+							</view>
+						</view>
+					
+
+				</view>
+			</view>
+		</view>
+		<view class="empty_cart" wx:else> 购物车为空~ </view>
+	</view>
+	<!-- 购物车列表 end-->
+	<!-- 购物车结算模块 begin -->
+	<view class="cart_settlement">
+		<view class="all_check">
+			<checkbox-group bindtap="allChecked">
+				<checkbox color="var(--themeColor)" checked="{{allChecked}}" disabled="{{disable}}"></checkbox>全选
+			</checkbox-group>
+		</view>
+		<view class="settle_cont">
+			<view class="font">合计:</view>
+			<view class="total_price">
+				<view class="price">
+					{{totalPrice}}<text class="txt_jf">积分</text>
+				</view>
+				<text class="txt_tips">已包含运费</text>
+			</view>
+			<button type="warn" bindtap="handlePay">结算({{sum}})</button>
+		</view>
+	</view>
+	<!-- 购物车结算模块 end -->
+</view>
